@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Username = SMTP_USER;
             $mail->Password = SMTP_PASS;
             $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->Port = 465;
 
-            $mail->setFrom('sender@example.com');
-            $mail->addAddress('recipient@example.com');
+            $mail->setFrom('pbochacik@mailfence.com');
+            $mail->addAddress('pawel.bochacik.programista@gmail.com');
             $mail->addReplyTo($email);
             $mail->Subject = $subject;
             $mail->Body = $message;
