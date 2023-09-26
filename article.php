@@ -16,20 +16,22 @@ if (isset($_GET['id'])) {
 <?php if ($article) : ?>
 
     <article>
-        <h2><?= htmlspecialchars($article[0]['title']); ?></h2>
+        <h2 class="single-title"><?= htmlspecialchars($article[0]['title']); ?></h2>
 
-        <time datetime="<?= $article[0]['published_at'] ?>"><?php
-            $datetime = new DateTime($article[0]['published_at']);
+        <div>
+            <time class="time-publishing" datetime="<?= $article[0]['published_at'] ?>">
+            <?php $datetime = new DateTime($article[0]['published_at']);
             echo $datetime->format("j F, Y");
-        ?></time>
+            ?></time>
 
-        <?php if ($article[0]['category_name']) : ?>
-            <p>Categories:
-                <?php foreach ($article as $a) : ?>
-                    <?= htmlspecialchars($a['category_name']); ?>
-                <?php endforeach; ?>
-            </p>
-        <?php endif; ?>
+            <?php if ($article[0]['category_name']) : ?>
+                <p class="categories">Categories:
+                    <?php foreach ($article as $a) : ?>
+                        <?= htmlspecialchars($a['category_name']); ?>
+                    <?php endforeach; ?>
+                </p>
+            <?php endif; ?>
+        </div>
 
         <?php if ($article[0]['image_file']) : ?>
             <img src="/uploads/<?= $article[0]['image_file']; ?>">
