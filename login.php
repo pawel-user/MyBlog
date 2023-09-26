@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2 class="title">Login</h2>
 
 <?php if (! empty($error)) : ?>
-    <p id="messageError"><?= $error ?></p>
+    <p id="notice"><?= $error ?></p>
 <?php endif; ?>
 
 <form method="post" id="formLogin">

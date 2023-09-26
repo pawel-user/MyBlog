@@ -4,10 +4,10 @@
  * Configuration settings
  */
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'cms');
-define('DB_USER', 'root');
-define('DB_PASS', NULL);
+define('DB_HOST', 'blog.pawel-bochacik.profesjonalnyprogramista.pl.mysql.dhosting.pl');
+define('DB_NAME', 'ieva7o_blogpawe');
+define('DB_USER', 'fie7ro_blogpawe');
+define('DB_PASS', 'owohf9Boh4ee');
 
 define('SMTP_HOST', 'smtp.mailfence.com');
 define('SMTP_USER', 'pbochacik');

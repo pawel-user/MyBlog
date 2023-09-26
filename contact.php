@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->SMTPAuth = true;
             $mail->Username = SMTP_USER;
             $mail->Password = SMTP_PASS;
-            $mail->SMTPSecure = 'tls';
+            $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
             $mail->setFrom('pbochacik@mailfence.com');
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2 class="title">Contact</h2>
 
 <?php if ($sent) : ?>
-    <p>Message sent.</p>
+    <p class="notice">Message sent.</p>
 <?php else: ?>
 
     <?php if (! empty($errors)) : ?>
